@@ -1,0 +1,17 @@
+2. 
+Tareas_SIN_hilos.py
+El tiempo de ejecucion suele ser siempre el mismo, podemos decir que el tiempo de ejecucion total es predecible, ya que tarea_2 y tarea_3 tienen un tiempo constante, mientras que tarea_1 depende del CPU.
+El analisis de datos de telescopios es un proceso de "maxima velocidad posible" altamente dependiente del rendimiento de las maquinas que lo ejecutan. A medida que la tecnologia avanza, la capacidad de procesamiento y analisis de estos datos tambien mejora, permitiendo descubrimientos cientificos mas rapidos y precisos en el campo de la astrofisica.
+El tiempo de espera en una llamada a un servicio de atencion al cliente es un proceso cuyo tiempo de respuesta no es dependiente de la velocidad de procesamiento de sistemas informaticos, sino de una serie de factores externos e impredecibles. Esto hace que la experiencia del cliente en términos de tiempos de espera sea altamente variable y dificil de predecir con precision.
+
+Tareas_CON_hilos.py
+El tiempo de ejecucion total ahora depende de la tarea que tarde mas en terminar, la mejora notable es que podemos completar otras tareas minusculas antes que esperar a que se complete una anterior para proseguir con esta, por esta razon las tareas no se completan en el orden escrito en el codigo, si no, en orden de la que menos tiempo tarde en cumplir su objetivo.
+El uso de multi-hilado en un servidor web de alta concurrencia es un claro ejemplo de como esta tecnica puede mejorar considerablemente el tiempo de respuesta de un sistema. Al permitir el manejo simultaneo de multiples solicitudes y la optimizacion del uso de recursos del sistema, el multi-hilado ayuda a asegurar que los servidores web puedan ofrecer un rendimiento rapido y eficiente, incluso bajo cargas pesadas.
+
+3.
+Sumador-restador.py
+El tiempo de ejecucion es bastante rapido, ya que solo es un contador al que se le resta y se le suma. El valor final del acumulador parece variar, esto se debe a que ambos hilos acceden y modifican la variable acumulador simultaneamente sin ninguna sincronizacion, se produce una race condition. Para evitar esto se podria emplear un lock para asegurar que solo un hilo pueda acceder a la seccion critica (lectura y modificacion de la variable) a la vez.
+
+4.
+Sumador-restador_SIN_race.py
+El valor final del acumulador ahora siempre resulta en 0, el tiempo de ejecucion sigue siendo minimo ya que es una tarea simple de suma y resta, pero puedo asumir que, si se diera una tarea mucho mas grande, el tiempo de ejecucion se veria impactado a causa del acceso y la liberacion del lock.
